@@ -1,6 +1,6 @@
-*/db_info.py
 */__pycache__/*
 *.pyc
+.env
 
 # mac 환경 제거
 *.DS_Store
