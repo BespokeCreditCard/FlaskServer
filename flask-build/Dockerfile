@@ -9,4 +9,4 @@ ENV FLASK_APP main:app
 # Add demo app
 COPY . /app
 WORKDIR /app
-CMD ["flask", "run"]
+CMD ["python3", "main.py"]
