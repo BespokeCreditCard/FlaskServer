@@ -8,5 +8,5 @@ ENV FLASK_APP main:app
 
 # Add demo app
 COPY . /app
-WORKDIR /app
+WORKDIR /app/flask-build/
 CMD ["python3", "main.py"]
