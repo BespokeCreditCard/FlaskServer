@@ -7,7 +7,7 @@ node {
         stage('Docker build') {
             sh '''
             yes | sudo docker image prune -a
-
+            sudo cp /home/ubuntu/requirements.txt /var/lib/jenkins/workspace/${JOB_NAME}/flask-build/requirements.txt
             sudo docker build -f /var/lib/jenkins/workspace/${JOB_NAME}/flask-build/Dockerfile \
                 -t flask-app .
 
