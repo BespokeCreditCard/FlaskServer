@@ -10,9 +10,6 @@ node {
             sudo cp /home/ubuntu/requirements.txt /var/lib/jenkins/workspace/${JOB_NAME}/flask-build/requirements.txt
             sudo docker build -f /var/lib/jenkins/workspace/${JOB_NAME}/flask-build/Dockerfile \
                 -t flask-app .
-
-            rm temp_env.sh
-            rm cleaned_env.sh 
             '''
         }
     }
