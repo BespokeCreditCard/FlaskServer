@@ -32,8 +32,9 @@ node {
                 stage('Deploy') {
                     sshagent(credentials: ['aws-ssh-pem-key']) {
                         sh(script: 'ssh -o StrictHostKeyChecking=no ubuntu@15.165.82.28 "sudo docker rm -f flask-app"')
+
                         sh(script: 'scp $MY_SECRET_FILE ubuntu@15.165.82.28:~/.env')
-                        sh(script: 'ssh ubuntu@3.34.232.104 "chmod 600 ~/.env"')
+                        sh(script: 'ssh ubuntu@15.165.82.28 "chmod 600 ~/.env"')
                         sh(script: 'ssh ubuntu@15.165.82.28 "sudo docker run --name flask-app --env-file ~/.env -e TZ=Asia/Seoul -p 80:5000 -d -t \${DOCKER_USER_ID}/flask-app:\${BUILD_NUMBER}"')
                     }
                 }
