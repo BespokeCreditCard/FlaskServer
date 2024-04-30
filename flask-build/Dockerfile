@@ -9,4 +9,4 @@ ENV FLASK_APP main:app
 # Add demo app
 COPY . /app
 WORKDIR /app
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run"]
