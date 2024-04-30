@@ -1,7 +1,7 @@
 FROM tiangolo/uwsgi-nginx:python3.10
 
 # Install requirements
-COPY ./requirements.txt /tmp/requirements.txt
+COPY ./flask-build/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 ENV FLASK_APP main:app
