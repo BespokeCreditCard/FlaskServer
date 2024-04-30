@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM tiangolo/uwsgi-nginx:python3.10
 
 # Install requirements
 COPY ./flask-build/requirements.txt /tmp/requirements.txt
