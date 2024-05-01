@@ -40,5 +40,8 @@ node {
                 }
         }
     }
+    stage('Cleaning up') { 
+              sh "sudo docker rmi ${DOCKER_USER_ID}/flask-app:${BUILD_NUMBER}" // sudo docker image 제거
+    } 
 }   
   
