@@ -113,7 +113,7 @@ def cluster_model(seq):
         # Light_gbm 모델 사용해서 군집 idx 예측
         ################################################################################
         try:
-            model_path = "flask_server/model/Light_gbm.pkl"
+            model_path = "./flask_build/model/Light_gbm.pkl"
             lgbm_model = joblib.load(model_path)
             predict_result = lgbm_model.predict(df)
             predicted_cluster_num = int(predict_result[0]) 
