@@ -65,9 +65,9 @@ def save_result(result_images):
     image_bytes2 = base64.b64decode(b64_str2)
 
     # 이미지 데이터를 로컬 파일로 저장
-    with open(r'./flask_build/dall_e_imgs/generated_image1.png', 'wb') as handler:
+    with open(r'./dall_e_imgs/generated_image1.png', 'wb') as handler:
         handler.write(image_bytes1)
-    with open(r'./flask_build/dall_e_imgs/generated_image2.png', 'wb') as handler:
+    with open(r'./dall_e_imgs/generated_image2.png', 'wb') as handler:
         handler.write(image_bytes2)
     print("로컬에 이미지 저장 완료")
     return b64_str1, b64_str2
