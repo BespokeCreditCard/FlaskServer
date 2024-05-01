@@ -13,5 +13,5 @@ PORT = match.group(2)
 DB = match.group(3)
 USER = os.environ.get("DBID")
 PW = os.environ.get("DBPW")
-def for_mysql():    
-    return HOST, PORT, USER, PW, DB
+def for_mysql() :
+    return HOST, str(PORT), USER, PW, DB
