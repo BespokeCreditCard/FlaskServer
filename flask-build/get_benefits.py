@@ -175,11 +175,11 @@ def get_benefits(cluster_num=3):
             cursor.execute(sql, (cluster_num,))
             print("군집 index 일치하는 행 추출 완료")
             rows = cursor.fetchall()
-            print("#####################################")
-            print("rows = "+rows)
+            print("rows = "+"\n".join(rows))
             # 모든 컬럼 이름 가져오기
             column_names = [desc[0] for desc in cursor.description]
-            
+            print("column_names")
+            print(column_names)
             # 혜택, 카드 인덱스 넣을 리스트
             benefits, card_idxs = [], []
             
@@ -194,6 +194,8 @@ def get_benefits(cluster_num=3):
             for row in rows:
                 card_idxs.append(row["card_index"])  # "카드 인덱스" 값 추가
                 for column in column_names:
+                    print("column")
+                    print(column)
                     # 카드 이름 컬럼(Unnamed: 0) 제외
                     if row[column] != 0 and column not in benefits and column not in exclude_columns:
                         korean_column = categories[column]
