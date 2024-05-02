@@ -175,7 +175,8 @@ def get_benefits(cluster_num=3):
             cursor.execute(sql, (cluster_num,))
             print("군집 index 일치하는 행 추출 완료")
             rows = cursor.fetchall()
-            print("rows = "+"\n".join(rows))
+            print("rows = ")
+            print(rows)
             # 모든 컬럼 이름 가져오기
             column_names = [desc[0] for desc in cursor.description]
             print("column_names")
