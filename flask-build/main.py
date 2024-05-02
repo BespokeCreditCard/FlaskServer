@@ -188,4 +188,4 @@ def deepl_translate():
 # 0.0.0.0 으로 모든 IP에 대한 연결을 허용
 CORS(app)
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',debug=True)
