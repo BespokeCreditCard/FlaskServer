@@ -20,7 +20,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello() :
     a = config.USER
-    return a
+    return a+"A"
 
 ################################################################################
 # !! 주의 route 뒤에 경로는 위에 Spring에서 적은 경로와 같아야함 !!
