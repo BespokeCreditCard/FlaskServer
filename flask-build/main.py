@@ -132,14 +132,14 @@ def generate_img():
     ### 시연 영상용 b64 이미지
     imgs = ["hamster1", "hamster2", "hamster3", "hamster4", "baby_doge1", "baby_doge2", "landscape1", "landscape2"]
 
-    with Image.open(f'./dall_e_imgs/{imgs[0]}.png') as img:
+    with Image.open(f'./dall_e_imgs/{imgs[6]}.png') as img:
         # PIL Image 객체를 바이트 버퍼로 변환
         buffered = io.BytesIO()
         img.save(buffered, format="PNG")        
         # 바이트 버퍼를 Base64 문자열로 변환
         b64_img1 = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-    with Image.open(f'./dall_e_imgs/{imgs[1]}.png') as img:
+    with Image.open(f'./dall_e_imgs/{imgs[7]}.png') as img:
         # PIL Image 객체를 바이트 버퍼로 변환
         buffered = io.BytesIO()
         img.save(buffered, format="PNG")
