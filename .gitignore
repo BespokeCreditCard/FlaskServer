@@ -1,0 +1,8 @@
+*/db_info.py
+*/__pycache__/*
+*.pyc
+
+# mac 환경 제거
+*.DS_Store
+.settings/
+
